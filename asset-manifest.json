@@ -1,16 +1,14 @@
 {
   "files": {
-    "main.css": "/acme-inc/static/css/main.073c9b0a.css",
-    "main.js": "/acme-inc/static/js/main.22a773f8.js",
-    "static/js/787.d84c292c.chunk.js": "/acme-inc/static/js/787.d84c292c.chunk.js",
-    "static/media/logo.svg": "/acme-inc/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/acme-inc/static/css/main.8dcede28.css",
+    "main.js": "/acme-inc/static/js/main.d0574a02.js",
+    "static/media/logo.png": "/acme-inc/static/media/logo.2eb735ae11d29bab9c50.png",
     "index.html": "/acme-inc/index.html",
-    "main.073c9b0a.css.map": "/acme-inc/static/css/main.073c9b0a.css.map",
-    "main.22a773f8.js.map": "/acme-inc/static/js/main.22a773f8.js.map",
-    "787.d84c292c.chunk.js.map": "/acme-inc/static/js/787.d84c292c.chunk.js.map"
+    "main.8dcede28.css.map": "/acme-inc/static/css/main.8dcede28.css.map",
+    "main.d0574a02.js.map": "/acme-inc/static/js/main.d0574a02.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.22a773f8.js"
+    "static/css/main.8dcede28.css",
+    "static/js/main.d0574a02.js"
   ]
 }
