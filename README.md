@@ -1,70 +1,125 @@
-# Iniciando nosso aplicativo ACME INC
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-Este projeto foi desenvolvido como exemplo. Totalmente código aberto
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/eduardozf/Twitter">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.6cZtBQhyBG2EFyhpW2iVlAHaHa%26pid%3DApi&f=1" alt="Logo" width="80" height="80">
+  </a>
 
-## Available Scripts
+  <h3 align="center">Acme Inc</h3>
 
-In the project directory, you can run:
+  <p align="center">
+    Um projeto para exemplo!
+    <br />
+    <a href="https://gustavofusco.github.io/acme-inc">Ver demo</a>
+    ·
+    <a href="https://github.com/gustavofusco/acme-inc/issues">Reportar Bug</a>
+  </p>
+</p>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<!-- TABLE OF CONTENTS -->
+## Sumário
 
-### `npm test`
+📌 [Sobre o projeto](#sobre-o-projeto)<br />
+📌 [Tecnologias utilizadas](#tecnologias-utilizadas)<br />
+📌 [Iniciando](#iniciando)<br />
+📌 [Pré-requisitos](#pré-requisitos) <br />
+📌 [Instalação](#instalação)<br />
+📌 [Licença](#licença)<br />
+📌 [Contato](#contato)<br />
+📌 [Agradecimentos](#agradecimentos)<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- ABOUT THE PROJECT -->
+## Sobre o projeto
+<p align="left">
+  <img src="src/imgs/mainPage.png" width="600px"/>
+  <img src="src/images/mobile.jpg" width="200px"/>
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+💡 Estou começando agora no desenvolvimento com o react e node, para treinar resolvi recriar algumas funcionalidade do Twitter.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tecnologias utilizadas
+* [React](https://reactjs.org/)
+* [Node](https://nodejs.org/en)
+* [Axios](https://www.axios.com/)
+* [Bootstrap](https://getbootstrap.com/)
 
-### `npm run eject`
+<!-- GETTING STARTED -->
+## Iniciando
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para iniciar o projeto localmente você precisará seguir algumas instruções.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Pré-requisitos
+* NodeJS
+* Yarn ou Npm
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Instalação
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```sh
+# Clone o repositório
+git clone https://github.com/gustavofusco/acme-inc.git
 
-## Learn More
+# Path ./back-end/
+1. Instalar pacotes
+# Yarn
+yarn
+# Npm
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Entrar na pasta do projeto web
+cd acme-inc/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Instale todos os pacotes
+# Yarn
+yarn
+# Npm
+npm install
 
-### Code Splitting
+# Ambiente de desenvolvimento
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Web
+yarn start / npm start
+```
 
-### Analyzing the Bundle Size
+<!-- LICENSE -->
+## Licença
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- CONTACT -->
+## Contato
 
-### Making a Progressive Web App
+Gustavo Fusco Sperandio -gustavo.sperandio25@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🔗 Link do projeto: [Acme Inc.](https://github.com/gustavofusco/acme-inc)
+<br />
+🔗 Link da demonstração: [Demo](https://gustavofusco.github.io/acme-inc)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<!-- ACKNOWLEDGEMENTS -->
+## Agradecimentos
+* [IMG Shields](https://shields.io)
+* [Best README Template](https://github.com/othneildrew/Best-README-Template)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/eduardozf/Twitter.svg?style=flat-square
+[contributors-url]: https://github.com/eduardozf/Twitter/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/eduardozf/Twitter.svg?style=flat-square
+[forks-url]: https://github.com/eduardozf/Twitter/network/members
+[stars-shield]: https://img.shields.io/github/stars/eduardozf/Twitter.svg?style=flat-square
+[stars-url]: https://github.com/eduardozf/Twitter/stargazers
+[issues-shield]: https://img.shields.io/github/issues/eduardozf/Twitter.svg?style=flat-square
+[issues-url]: https://github.com/eduardozf/Twitter/issues
+[license-shield]: https://img.shields.io/github/license/eduardozf/Twitter.svg?style=flat-square
+[license-url]: https://github.com/gustavofusco/acme-inc/blob/main/LICENSE.txt
+[product-screenshot]: src/imgs/mainPage.jpg
+[product-gif]: src/imgs/mobile.jpg
