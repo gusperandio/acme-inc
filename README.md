@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Iniciando nosso aplicativo ACME INC
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi desenvolvido como exemplo. Totalmente código aberto
 
 ## Available Scripts
 
