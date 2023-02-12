@@ -1,0 +1,154 @@
+.card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  color: #2e2d31;
+  background: #131313;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 2rem;
+  
+}
+
+.temporary_text {
+  font-weight: bold;
+  font-size: 24px;
+  color: #f8f8f8;
+}
+
+.card_content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+    /* edit the width to fit card */
+  width: 100%;
+  padding: 20px;
+  background: #f2f2f2;
+  border-top-left-radius: 20px;
+    /* edit here to change the height of the content box */
+  transform: translateY(150px);
+  transition: transform .25s;
+}
+
+.card_content::before {
+  content: '';
+  position: absolute;
+  top: -47px;
+  right: -45px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-175deg);
+  border-radius: 50%;
+  box-shadow: inset 48px 48px #f2f2f2;
+}
+
+.card_title {
+  color: #131313;
+  line-height: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.card_subtitle {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #222;
+}
+
+.card_description {
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity .5s;
+  color: #222;
+}
+
+.card:hover .card_content {
+  transform: translateY(0);
+}
+
+.card:hover .card_description {
+  opacity: 1;
+  transition-delay: .25s;
+}
+
+.btnFav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+
+.btnFav::after {
+  content: 'like';
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s linear;
+  top: 115%;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  transition: .2s linear;
+}
+
+.icon path {
+  fill: white;
+  transition: .2s linear;
+}
+
+.btnFav:hover > .icon {
+  transform: scale(1.2);
+}
+
+.btnFav:hover > .icon path {
+  fill: rgb(201, 97, 183);
+}
+
+.btnFav:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: 105%;
+}
+
+.divOptions{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+Link{
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

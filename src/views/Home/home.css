@@ -1,0 +1,18 @@
+.products{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding: 2rem;
+}
+
+.bold{
+  font-weight: bold;
+}
+.check{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-right: 10px;
+}
