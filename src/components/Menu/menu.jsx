@@ -41,7 +41,7 @@ export default function Menu() {
             <div
               style={{
                 display: "flex",
-                justifyContent: "flex-end",
+                justifyContent: "flex-end" ,
                 marginRight: "1rem",
               }}
             >
