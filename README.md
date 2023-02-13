@@ -1,10 +1,3 @@
-<!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -44,9 +37,6 @@
   <img src="src/imgs/mainPage.png" width="600px"/>
   <img src="src/images/mobile.jpg" width="200px"/>
 </p>
-
-
-💡 Estou começando agora no desenvolvimento com o react e node, para treinar resolvi recriar algumas funcionalidade do Twitter.
 
 ### Tecnologias utilizadas
 * [React](https://reactjs.org/)
@@ -98,7 +88,7 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 <!-- CONTACT -->
 ## Contato
 
-Gustavo Fusco Sperandio -gustavo.sperandio25@gmail.com
+Gustavo Fusco Sperandio - gustavo.sperandio25@gmail.com
 
 🔗 Link do projeto: [Acme Inc.](https://github.com/gustavofusco/acme-inc)
 <br />
@@ -111,15 +101,6 @@ Gustavo Fusco Sperandio -gustavo.sperandio25@gmail.com
 * [Best README Template](https://github.com/othneildrew/Best-README-Template)
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/eduardozf/Twitter.svg?style=flat-square
-[contributors-url]: https://github.com/eduardozf/Twitter/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/eduardozf/Twitter.svg?style=flat-square
-[forks-url]: https://github.com/eduardozf/Twitter/network/members
-[stars-shield]: https://img.shields.io/github/stars/eduardozf/Twitter.svg?style=flat-square
-[stars-url]: https://github.com/eduardozf/Twitter/stargazers
-[issues-shield]: https://img.shields.io/github/issues/eduardozf/Twitter.svg?style=flat-square
-[issues-url]: https://github.com/eduardozf/Twitter/issues
-[license-shield]: https://img.shields.io/github/license/eduardozf/Twitter.svg?style=flat-square
 [license-url]: https://github.com/gustavofusco/acme-inc/blob/main/LICENSE.txt
 [product-screenshot]: src/imgs/mainPage.jpg
 [product-gif]: src/imgs/mobile.jpg
