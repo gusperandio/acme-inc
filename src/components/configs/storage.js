@@ -26,7 +26,7 @@ export function saveProducts(ids, names, values, descs, images) {
   }
 }
 
-export function saveCart(ids, qtds) {
+export function saveCart(ids, qtds, type) {
   const collectionCart = [];
   let recebido = {
     id: ids,
@@ -47,12 +47,21 @@ export function saveCart(ids, qtds) {
       localStorage.setItem(keyCart, JSON.stringify(collection));
     } else {
       const aux = parseInt(collection[0].qtd, 10);
-      recebido.qtd = parseInt(aux + 1, 10);
+      
+      if (type === "sum") {
+        recebido.qtd = parseInt(aux + 1, 10);
+      } else {
+        recebido.qtd = parseInt(aux - 1, 10);
+      }
+      const idAux = parseInt(ids, 10) - 1;
+      
+      
       deleta(keyCart, ids);
-
-      collection = select(keyCart);
-      collection.push(recebido);
-      localStorage.setItem(keyCart, JSON.stringify(collection));
+      if(recebido.qtd > 0){
+        collection = select(keyCart);
+        collection.splice(idAux, 0, recebido);
+        localStorage.setItem(keyCart, JSON.stringify(collection));
+      }
     }
   }
 }
@@ -71,11 +80,11 @@ export function saveFav(ids) {
       fav: !collectionAux[0].fav,
     };
 
-    console.log(collectionAux[0].fav)
+    console.log(collectionAux[0].fav);
     const idAux = parseInt(ids, 10) - 1;
 
     deleta(key, ids);
-    collectionComplete = select(key)
+    collectionComplete = select(key);
     collectionComplete.splice(idAux, 0, recebido);
     localStorage.setItem(key, JSON.stringify(collectionComplete));
   }
@@ -93,7 +102,7 @@ export function select(chave) {
 }
 
 export function deleta(chave, item) {
-  console.log(chave, item)
+  console.log(chave, item);
   const value = select(chave);
   if (value) {
     const result = value.filter((i) => i.id !== item);

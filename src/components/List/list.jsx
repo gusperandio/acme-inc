@@ -110,7 +110,7 @@ export default function List(props) {
             role="group"
             aria-label="Basic outlined example"
           >
-            <button type="button" className="btn btn-outline-dark btn-sm">
+            <button type="button" className="btn btn-outline-dark btn-sm" onClick={() => props.updateValue(props.id, "sub")}>
               -
             </button>
             <button
@@ -120,7 +120,7 @@ export default function List(props) {
             >
               {props.qtd}
             </button>
-            <button type="button" className="btn btn-outline-dark btn-sm">
+            <button type="button" className="btn btn-outline-dark btn-sm" onClick={() => props.updateValue(props.id, "sum")}>
               +
             </button>
           </div>

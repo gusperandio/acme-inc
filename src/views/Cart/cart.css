@@ -43,6 +43,18 @@
   padding: 0 2rem 2rem 0;
 }
 
+.divEmpty{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.imgEmpty{
+  width: 250px;
+  height: 250px;
+}
+
 @media (width <= 520px){
 
 .infos{

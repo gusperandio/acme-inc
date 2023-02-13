@@ -98,7 +98,7 @@ export default function Products() {
   };
 
   const addCart = () => {
-    saveCart(id, "1");
+    saveCart(id, "1", "sum");
   };
 
   const favClick = () => {
@@ -117,7 +117,7 @@ export default function Products() {
   return (
     <>
       <Menu />
-      <ul className="breadcrumb">
+      {/* <ul className="breadcrumb">
         <li>
           <Link to={"/"} style={{ textDecoration: "underline" }}>
             Home
@@ -128,7 +128,7 @@ export default function Products() {
             Pictures
           </Link>
         </li>
-      </ul>
+      </ul> */}
       <section className="banner">
         <div>
           <h2>{allP[0].name}</h2>

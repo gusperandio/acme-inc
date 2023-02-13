@@ -2,12 +2,9 @@
 import React, { useState, useEffect } from "react";
 import Menu from "../../components/Menu/menu";
 import "./cart.css";
-import {
-  deleta,
-  select,
-} from "../../components/configs/storage";
+import { deleta, select, saveCart } from "../../components/configs/storage";
 import List from "../../components/List/list";
-// import boos
+import empty from "../../imgs/empty.png";
 export default function Cart() {
   const jsonIcon = (
     <svg
@@ -38,44 +35,86 @@ export default function Cart() {
       <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z" />
     </svg>
   );
-  
-  const JSONFinal = "JSON COM DIVERSAS COISAS";
+
+  const carregaJSON = () => {
+    const cart = loadProducts();
+    const favoritos = select("produtos").filter((f) => f.fav);
+    let stringFinal =
+      `{ "name": "maria", "phone": "+55 41 9999-999", "favoritesLength": ` +
+      favoritos.length +
+      `, "favorites" : [ `;
+
+    for (let i = 0; i < favoritos.length; i++) {
+      stringFinal += `{ "id": "` + favoritos[i].id + `", `;
+      stringFinal += ` "name": "` + favoritos[i].name + `", `;
+      stringFinal += ` "value": ` + favoritos[i].value + `, `;
+      stringFinal += ` "image": "` + favoritos[i].image + `", `;
+      stringFinal += ` "desc": "` + favoritos[i].desc + `", `;
+      stringFinal += ` "fav": ` + favoritos[i].fav + ` }`;
+
+      if (i < favoritos.length - 1) {
+        stringFinal += ", ";
+      }
+    }
+    stringFinal += ` ], "cartLength" : ` + cart.length + `, "products" : [ `;
+
+    for (let i = 0; i < cart.length; i++) {
+      stringFinal += `{ "id": "` + cart[i].id + `", `;
+      stringFinal += ` "name": "` + cart[i].name + `", `;
+      stringFinal += ` "value": ` + cart[i].value + `, `;
+      stringFinal += ` "image": "` + cart[i].image + `", `;
+      stringFinal += ` "desc": "` + cart[i].desc + `", `;
+      stringFinal += ` "fav": ` + cart[i].fav + ` }`;
+
+      if (i < cart.length - 1) {
+        stringFinal += ", ";
+      }
+    }
+
+    stringFinal += " ] }";
+    setJson(stringFinal);
+  };
 
   const loadProducts = () => {
     const cart = select("carrinho");
     let add = [];
-    let valueTotal = 0
+    let valueTotal = 0;
     if (cart) {
       for (let i = 0; i < cart.length; i++) {
         const element = cart[i];
         const aux = select("produtos").filter((i) => i.id === element.id);
         aux[0].qtd = cart[i].qtd;
         aux[0].image = aux[0].image.replace("255", "100").replace("240", "100");
-        valueTotal = valueTotal + (aux[0].qtd * parseInt(aux[0].value,10))
+        valueTotal = valueTotal + aux[0].qtd * parseInt(aux[0].value, 10);
         add.push(aux[0]);
       }
     }
-    setTotal(valueTotal)
+    setTotal(valueTotal);
     return add;
   };
-  const [total, setTotal] = useState(0)
+  const [total, setTotal] = useState(0);
   const [added, setAdd] = useState([]);
+  const [jsonFinal, setJson] = useState("[]");
 
   useEffect(() => {
     document.title = "Carrinho - Acme Inc.";
     setAdd(loadProducts());
+
+    carregaJSON()
   }, []);
 
-
   const deleteCart = (id) => {
-    deleta( "carrinho", id) 
-    setAdd(loadProducts())
-  }
+    deleta("carrinho", id);
+    setAdd(loadProducts());
+  };
 
-  return (
-    <>
-      <Menu></Menu>
+  const updateValue = (id, type) => {
+    saveCart(id, "1", type);
+    setAdd(loadProducts());
+  };
 
+  const CartComplete = () => {
+    return (
       <div className="product" key="cart">
         {added.map((a) => {
           return (
@@ -89,6 +128,7 @@ export default function Cart() {
               id={a.id}
               qtd={a.qtd}
               deleteCart={deleteCart}
+              updateValue={updateValue}
             />
           );
         })}
@@ -100,12 +140,15 @@ export default function Cart() {
               className="btn btn-success"
               data-bs-toggle="modal"
               data-bs-target="#modalFinal"
+              onClick={carregaJSON}
             >
               Finalizar compra
             </button>
           </div>
-          <div style={{ paddingRight: "3rem" , color: "#222"}}>
-            <p style={{fontWeight: "100", fontSize: "2rem"}}>R$ {total}.<small>00</small></p>
+          <div style={{ paddingRight: "3rem", color: "#222" }}>
+            <p style={{ fontWeight: "100", fontSize: "2rem" }}>
+              R$ {total}.<small>00</small>
+            </p>
           </div>
           <div
             className="modal fade"
@@ -132,7 +175,9 @@ export default function Cart() {
                   ></button>
                 </div>
                 <div className="modal-body" id="JsonResp">
-                  ...
+                  <code>
+                    {jsonFinal}
+                  </code>
                 </div>
                 <div className="modal-footer">
                   <button
@@ -146,7 +191,7 @@ export default function Cart() {
                     type="button"
                     className="btn btn-primary"
                     onClick={() => {
-                      navigator.clipboard.writeText(JSONFinal);
+                      navigator.clipboard.writeText(jsonFinal);
                     }}
                   >
                     Copiar {clipBoadIcon}
@@ -157,6 +202,23 @@ export default function Cart() {
           </div>
         </div>
       </div>
+    );
+  };
+
+  const Empty = () => {
+    return (
+      <>
+        <div className="divEmpty">
+          <img src={empty} className="imgEmpty" />
+        </div>
+      </>
+    );
+  };
+
+  return (
+    <>
+      <Menu></Menu>
+      {added.length > 0 ? <CartComplete /> : <Empty />}
     </>
   );
 }
