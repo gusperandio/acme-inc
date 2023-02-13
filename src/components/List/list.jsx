@@ -72,7 +72,7 @@ export default function List(props) {
       <div className="infos">
         <img src={props.image} className="imgInfo" />
         <div className="infoProduct infoProductTitle">
-          <h4>{props.name}</h4>
+          <h4 className="h4M">{props.name}</h4>
           <div
             style={{
               display: "flex",

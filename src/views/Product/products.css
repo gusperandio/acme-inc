@@ -4,6 +4,12 @@ section{
 
 @media (width <= 720px){
   section{ padding: 30px 10%;}
+
+  .banner{
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
 }
 
 .banner{
@@ -16,20 +22,10 @@ section{
   min-height: 30vw;
 }
 
-@media (width <= 720px){
-  .banner{
-    text-align: center;
-    flex-direction: column-reverse;
-    justify-content: center;
-  }
-}
-
-
-
 .banner h2{
   white-space: nowrap;
   margin: 0 0 4px;
-  font-size: 40px;
+  font-size: 2rem;
   color: rgb(255 255 225 / 96%)
 }
 

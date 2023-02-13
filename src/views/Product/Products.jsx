@@ -131,7 +131,7 @@ export default function Products() {
       </ul> */}
       <section className="banner">
         <div>
-          <h2>{allP[0].name}</h2>
+          <h2 className="h2M">{allP[0].name}</h2>
           <h3>
             R$ {allP[0].value}.<small>00</small>
           </h3>
