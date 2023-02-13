@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/acme-inc/static/css/main.7b4aabf2.css",
-    "main.js": "/acme-inc/static/js/main.d3736aee.js",
+    "main.css": "/acme-inc/static/css/main.b204e85f.css",
+    "main.js": "/acme-inc/static/js/main.105af9f4.js",
     "static/media/logo.png": "/acme-inc/static/media/logo.2eb735ae11d29bab9c50.png",
     "static/media/empty.png": "/acme-inc/static/media/empty.e04adf4284ad2b624875.png",
     "index.html": "/acme-inc/index.html",
-    "main.7b4aabf2.css.map": "/acme-inc/static/css/main.7b4aabf2.css.map",
-    "main.d3736aee.js.map": "/acme-inc/static/js/main.d3736aee.js.map"
+    "main.b204e85f.css.map": "/acme-inc/static/css/main.b204e85f.css.map",
+    "main.105af9f4.js.map": "/acme-inc/static/js/main.105af9f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b4aabf2.css",
-    "static/js/main.d3736aee.js"
+    "static/css/main.b204e85f.css",
+    "static/js/main.105af9f4.js"
   ]
 }
