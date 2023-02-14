@@ -34,8 +34,8 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
 <p align="left">
-  <img src="src/imgs/mainPage.png" width="600px"/>
-  <img src="src/images/mobile.jpg" width="200px"/>
+  <img src="src/imgs/mainPage.jpg" width="600px"/>
+  <img src="src/imgs/mobile.jpg" width="200px"/>
 </p>
 
 ### Tecnologias utilizadas
