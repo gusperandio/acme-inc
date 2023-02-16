@@ -215,9 +215,12 @@ export default function Cart() {
     );
   };
 
+  const cartIcon = () =>{
+    return window.location.href.includes('/cart')
+  }
   return (
     <>
-      <Menu></Menu>
+      <Menu cartIcon={cartIcon}></Menu>
       {added.length > 0 ? <CartComplete /> : <Empty />}
     </>
   );
